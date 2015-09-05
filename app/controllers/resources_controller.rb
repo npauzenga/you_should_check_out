@@ -3,6 +3,10 @@ class ResourcesController < ApplicationController
     @resources = Resource.all
   end
   
+  def show
+    @resource = Resource.find(params[:id])
+  end
+  
   def new
     @resource = Resource.new
   end
@@ -16,9 +20,9 @@ class ResourcesController < ApplicationController
     end
   end
   
-  private
+  private 
   
     def resource_params
-      params.permit(:title, :description, :link)
+      params.require(:resource).permit(:title, :description, :link)
     end
 end
