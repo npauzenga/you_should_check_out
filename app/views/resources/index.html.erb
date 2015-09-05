@@ -1,0 +1,13 @@
+<% @resources.each do |resource| %>
+  <div class ="resource">
+    <div class="row">
+      <div class="col-md-1">
+        <a href="<%= resource.link %>"><%= resource.title %></a>
+        <p></p>
+        <p class="description"><%= resource.description %></p>
+      </div>
+    </div>
+  </div>
+  <% end %>
+  
+  
