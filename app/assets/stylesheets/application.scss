@@ -14,5 +14,29 @@
  *= require_self
  */
 
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+/*******
+Navigation
+******/
+
+.navbar {
+  font-family: 'Indie Flower', cursive;
+}
+
+.navbar-brand  {
+  font-size: 40px;
+  margin: 10px 0 0 10px;
+}
+
+.resource a {
+  text-decoration: none;
+}
+
+.btn {
+  margin: 10px 0 0 10px;
+  font-size: 30px;
+  text-decoration: none;
+}
