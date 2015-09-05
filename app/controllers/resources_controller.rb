@@ -10,7 +10,7 @@ class ResourcesController < ApplicationController
   def create
     @resource = Resource.new(resource_params)
     if @resource.save
-      #TODO
+      redirect_to "/"
     else
       render 'new'
     end
@@ -19,6 +19,6 @@ class ResourcesController < ApplicationController
   private
   
     def resource_params
-      params.require(:title).permit(:description, :link)
+      params.permit(:title, :description, :link)
     end
 end
