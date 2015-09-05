@@ -1,20 +1,23 @@
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <ul class="nav navbar-nav">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-    </ul>
+<div class="navbar">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
 <div class="container">
   <div class="row">
     <div class ="resource">
         <% @resources.each do |resource| %>
-        <a class="title" href="<%= resource.link %>"><%= resource.title %></a>
+        <h1><a class="title" href="<%= resource.link %>"><%= resource.title %></a></h1>
         <p class="description"><%= resource.description %></p>
+        <% end %>
     </div>
   </div>
 </div>
-<% end %>
+
   
   
