@@ -10,7 +10,7 @@ class ResourcesController < ApplicationController
   def create
     @resource = Resource.new(resource_params)
     if @resource.save
-      redirect_to "/"
+      redirect_to '/'
     else
       render 'new'
     end
