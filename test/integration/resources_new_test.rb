@@ -3,7 +3,7 @@ require 'test_helper'
 class ResourcesNewTest < ActionDispatch::IntegrationTest
   
   test "invalid resource information" do
-    get new_path
+    get add_path
     assert_no_difference 'Resource.count' do
       post resources_path, resource: { title: "",
                                        description: "foo",
