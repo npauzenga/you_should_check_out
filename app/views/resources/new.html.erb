@@ -1,0 +1,20 @@
+<% provide(:title, 'new resource') %>
+<h1>You should check out...</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@resource) do |r| %>
+      <%= render 'shared/error_messages' %>
+      
+      <%= r.label :title %>
+      <%= r.text_field :title, class: 'form-control' %>
+      
+      <%= r.label :description %>
+      <%= r.text_field :description, class: 'form-control' %>
+      
+      <%= r.label :link %>
+      <%= r.text_field :link, class: 'form-control' %>
+      
+      <%= r.submit "Add Resource", class: "btn btn-primary" %>
+      <% end %>
+  </div>
+</div>
