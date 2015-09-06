@@ -41,6 +41,11 @@ Navigation
   text-decoration: none;
 }
 
+#slack {
+  height: auto;
+  width: 100%;
+}
+
 /*******
 New Submission Page
 ******/
@@ -74,3 +79,9 @@ Index
 .glyphicon:hover {
   opacity: 1.0;
 }
+
+.links {
+  padding: 100px 0 0 100px;
+}
+
+
