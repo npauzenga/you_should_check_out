@@ -3,7 +3,8 @@
     <div class ="resource">
         <% @resources.each do |resource| %>
         <h1><a class="title" href="<%= resource.link %>"><%= resource.title %></a></h1>
-        <p class="description"><%= resource.description %></p>
+        <p class="description"><%= resource.description %>
+        <%= link_to '<i class="glyphicon glyphicon-pencil"></i>'.html_safe, edit_resource_path(resource) %></p>
         <% end %>
     </div>
   </div>

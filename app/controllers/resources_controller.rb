@@ -20,6 +20,19 @@ class ResourcesController < ApplicationController
     end
   end
   
+  def edit
+    @resource = Resource.find(params[:id])
+  end
+  
+  def update
+    @resource = Resource.find(params[:id])
+    if @resource.update_attributes(resource_params)
+      redirect_to '/'
+    else
+      render 'edit'
+    end
+  end
+  
   private 
   
     def resource_params
